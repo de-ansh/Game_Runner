@@ -3,6 +3,7 @@ package com.pythonbot.Learnspringframework;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+record  Address(String firstLine, String City){}
 record  Person(String name, int age){
 
 };
@@ -19,6 +20,10 @@ public class HelloWorldConfiguration {
     @Bean
     public  Person person(){
         return  new Person("Ravi", 20);
+    }
+    @Bean(name= "address2")
+    public Address address(){
+        return new Address("Howrah,West Bengal", "Kolkata");
     }
     @Bean
     public  Person person2(){
