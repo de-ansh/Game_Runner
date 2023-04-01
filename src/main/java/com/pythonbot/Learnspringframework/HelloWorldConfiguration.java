@@ -29,5 +29,9 @@ public class HelloWorldConfiguration {
     public  Person person2(){
         return  new Person("Ritwik", 21);
     }
+    @Bean(name= "person2 address")
+    public Address address2(){
+        return new Address("Bankura", ",West Bengal");
+    }
 
 }
